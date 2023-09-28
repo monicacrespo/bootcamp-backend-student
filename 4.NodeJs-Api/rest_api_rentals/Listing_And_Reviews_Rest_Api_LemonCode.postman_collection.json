@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "6c0d0e81-be52-4733-8285-525737542cbf",
+		"name": "Listings And reviews Rest Api Lemon Code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "0.1 Login Admin User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"admin@email.com\",\r\n\t\"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/security/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"security",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0.2 Login Standard User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"user@email.com\",\r\n\t\"password\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/security/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"security",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.1 Get Paged Listings And Reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews?country=Spain&page=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Spain"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.2 Get Paged Listings And Reviews Without Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews?page=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.3 Get Listings And Reviews Without any Params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.4 Get Listings And Reviews With Only Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews?country=Spain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Spain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.5 Get Listings And Reviews with Wrong Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews?country=Sspain",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Sspain"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 Get Listing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews/10082422",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews",
+						"10082422"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.1 Get Listing Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews/10082422",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews",
+						"10082422"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.2 Get Listing Wrong",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews/000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews",
+						"000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 Add One Review To A Listing",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comments\": \"Really nice apartment add\",    \r\n    \"reviewer_name\": \"Monica\",\r\n    \"listing_id\": \"10545725\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews/10545725/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews",
+						"10545725",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.1 Update Listing",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"10082422\",\r\n    \"listing_url\": \"https://www.airbnb.com/rooms/10082422\",\r\n    \"description\": \"Update - Hi!  Cozy double bed room in amazing flat next to Passeig de Sant Joan and to metro stop Verdaguer. 3 streets to Sagrada Familia and 4 streets to Passeig de Gracia. Flat located in the center of the city.  View to Sagrada Familia and Torre Agbar. Nice flat in the central neighboorhood of Eixample. Ideal couple or 2 friends. Dreta de l'Eixample\",\r\n    \"country\": \"Spain\",\r\n    \"bedrooms\": 1,\r\n    \"beds\": 2,\r\n    \"bathrooms\": 1,\r\n    \"street\": \"Update 2 - Barcelona, Catalunya, Spain\",\r\n    \"city\": \"Barcelona\",\r\n    \"reviews\": [\r\n        {           \r\n            \"reviewer_name\": \"Marta\",\r\n            \"comments\": \"Nice apartment\",\r\n            \"listing_id\": \"10082422\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews/10082422",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews",
+						"10082422"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.1 Insert Listing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"10545726\",\r\n    \"listing_url\": \"new url\",\r\n    \"description\": \"new description\",\r\n    \"country\": \"Spain\",\r\n    \"bedrooms\": 1,\r\n    \"beds\": 1,\r\n    \"bathrooms\": 1,\r\n    \"street\": \"street\",\r\n    \"city\": \"Cuenca\",\r\n    \"reviews\": [\r\n        {           \r\n            \"reviewer_name\": \"Monica\",\r\n            \"comments\": \"New Very Nice flat\",\r\n            \"listing_id\": \"10545726\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/listingsAndReviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"listingsAndReviews"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
