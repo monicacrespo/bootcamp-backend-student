@@ -10,7 +10,7 @@ Github repositories for the "Stack Documental" area:
 |MongoDB | [MongoDB Queries](https://github.com/monicacrespo/bootcamp-backend-student/tree/main/2.MongoDB-Queries)| NA |2|
 |JavaScript / TypeScript | [JavaScript and TypeScript](https://github.com/monicacrespo/bootcamp-backend-student/tree/main/3.Javascript-Typescript)|[Javascript Typescript](https://github.com/Lemoncode/bootcamp-backend/tree/main/00-stack-documental/03-javascript-typescript) |3|
 | NodeJs + Apis | [REST API with Node js & Express and MongoDB](https://github.com/monicacrespo/bootcamp-backend-student/tree/main/4.NodeJs-Api)|[Rest Api](https://github.com/Lemoncode/bootcamp-backend/tree/main/00-stack-documental/04-rest-api) |4|
-| Cloud | [AWS](https://github.com/monicacrespo/bootcamp-backend-student-aws)|[Lemoncode Cloud](https://github.com/Lemoncode/bootcamp-backend/tree/main/00-stack-documental/05-cloud) |5|
+| Cloud | [AWS](https://github.com/monicacrespo/bootcamp-backend-student-aws)|[Cloud](https://github.com/Lemoncode/bootcamp-backend/tree/main/00-stack-documental/05-cloud) |5|
 
 You can find the repositories for the "Stack Relational" [here](https://github.com/monicacrespo/bootcamp-backend-student-relational).
 
