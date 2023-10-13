@@ -1,31 +1,19 @@
-import { RequestHandler } from 'express';
-import jwt from 'jsonwebtoken';
+import { Request, Response, NextFunction, RequestHandler } from 'express';
+import { verifyJWT } from 'common/helpers';
 import { envConstants } from 'core/constants';
 import { UserSession, Role } from 'common-app/models';
 
-const verify = (token: string, secret: string): Promise<UserSession> =>
-  new Promise((resolve, reject) => {
-    jwt.verify(token, secret, (error, userSession: UserSession) => {
-      if (error) {
-        reject(error);
-      }
-
-      if (userSession) {
-        resolve(userSession);
-      } else {
-        reject();
-      }
-    });
-  });
-
-export const authenticationMiddleware: RequestHandler = async (
-  req,
-  res,
-  next
-) => {
+export const authenticationMiddleware = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): Promise<void> => {
   try {
     const [, token] = req.cookies.authorization?.split(' ') || [];
-    const userSession = await verify(token, envConstants.AUTH_SECRET);
+    const userSession = await verifyJWT<UserSession>(
+      token,
+      envConstants.AUTH_SECRET
+    );
     req.userSession = userSession;
     next();
   } catch (error) {
